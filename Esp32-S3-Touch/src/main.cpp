@@ -2,7 +2,7 @@
 // #include<driver/touch_sensor_common.h>
 // #include<driver/touch_sensor.h>
 
-#define EXT_ISR_MODE 1
+#define EXT_ISR_MODE 0
 
 void TouchEvent(){
   Serial.printf("Touch Event.\r\n");
@@ -14,7 +14,7 @@ void PinIntEvent(){
 
 void setup() {
   Serial.begin(115200);
-  ledcSetup()
+  // ledcSetup()
   // touch_pad_init();
   // touch_pad_sw_start();
   // touch_pad_filter_enable();
