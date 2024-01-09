@@ -22,6 +22,10 @@ String transEncryptionType(wifi_auth_mode_t encryptionType){		//对比出该wifi
 }
 
 
+void TouchEvent(){
+  Serial.println("Touch Event");
+}
+
 void ScanNetWork(){
   Serial.println("scan deno");
   int n = WiFi.scanNetworks();
@@ -52,6 +56,8 @@ void setup() {
   Serial.begin(115200);
   WiFi.mode(WIFI_STA);
   ScanNetWork();
+  // touchAttachInterrupt(T2, TouchEvent, 100);
+  Serial.println("Test");
   delay(100);
 }
 
@@ -59,4 +65,8 @@ void loop() {
   // int d =  10;
   // Serial.println("hxt shi yi ge da ben dang "+d);
   delay(100);
+
+  Serial.printf("Deafult free size: %d\n", heap_caps_get_free_size(MALLOC_CAP_DEFAULT));
+  Serial.printf("PSRAM free size: %d\n", heap_caps_get_free_size(MALLOC_CAP_SPIRAM));
+  Serial.printf("Flash size: %d bytes\n", ESP.getFlashChipSize());
 }
