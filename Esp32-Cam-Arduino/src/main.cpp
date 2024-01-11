@@ -150,7 +150,7 @@ void setup()
   Serial.print("Stream Link: http://");
   Serial.print(ip);
   Serial.println("/mjpeg/1");
-  server.on("/mjpeg/1", HTTP_GET, handle_jpg_stream);
+  server.on("/mjpeg/1", HTTP_GET , handle_jpg_stream);
   server.on("/jpg", HTTP_GET, handle_jpg);
   server.onNotFound(handleNotFound);
   server.begin();
