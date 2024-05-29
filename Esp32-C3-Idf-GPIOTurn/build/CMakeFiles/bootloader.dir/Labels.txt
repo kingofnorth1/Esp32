@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+I:/document/Esp32/Esp32-C3-Idf-GPIOTurn/build/CMakeFiles/bootloader
+I:/document/Esp32/Esp32-C3-Idf-GPIOTurn/build/CMakeFiles/bootloader.rule
+I:/document/Esp32/Esp32-C3-Idf-GPIOTurn/build/CMakeFiles/bootloader-complete.rule
+I:/document/Esp32/Esp32-C3-Idf-GPIOTurn/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+I:/document/Esp32/Esp32-C3-Idf-GPIOTurn/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+I:/document/Esp32/Esp32-C3-Idf-GPIOTurn/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+I:/document/Esp32/Esp32-C3-Idf-GPIOTurn/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+I:/document/Esp32/Esp32-C3-Idf-GPIOTurn/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+I:/document/Esp32/Esp32-C3-Idf-GPIOTurn/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+I:/document/Esp32/Esp32-C3-Idf-GPIOTurn/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
