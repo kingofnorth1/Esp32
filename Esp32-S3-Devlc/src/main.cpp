@@ -14,7 +14,7 @@ void loop() {
   digitalWrite(48, LOW);
   delay(500);
   digitalWrite(48, HIGH);
-  delay(1000);
+  delay(500);
 }
 
 // put function definitions here:
