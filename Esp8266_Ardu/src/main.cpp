@@ -1,22 +1,36 @@
 #include <Arduino.h>
-#include <Stepper.h>
 
-enum gpio
+#include "AudioFileSourcePROGMEM.h"
+#include "AudioGeneratorWAV.h"
+#include "AudioOutputI2SNoDAC.h"
+
+// VIOLA sample taken from https://ccrma.stanford.edu/~jos/pasp/Sound_Examples.html
+#include "viola.h"
+
+AudioGeneratorWAV *wav;
+AudioFileSourcePROGMEM *file;
+AudioOutputI2SNoDAC *out;
+
+void setup()
 {
-  IN1 = 14,
-  IN2 = 13,
-  IN3 = 12,
-  IN4 = 16
-};
+  Serial.begin(115200);
+  delay(1000);
+  Serial.printf("WAV start\n");
 
-void WritePins(gpio in, uint8_t temp);
-
-void WritePins(gpio in, uint8_t temp)
-{
-  digitalWrite(in, temp);
-  delay(200);
+  audioLogger = &Serial;
+  file = new AudioFileSourcePROGMEM( viola, sizeof(viola) );
+  out = new AudioOutputI2SNoDAC();
+  wav = new AudioGeneratorWAV();
+  wav->begin(file, out);
 }
 
-void loop() {
-
+void loop()
+{
+  if (wav->isRunning()) {
+    if (!wav->loop()) wav->stop();
+  } else {
+    Serial.printf("WAV done\n");
+    delay(1000);
+  }
 }
+
